@@ -40,7 +40,7 @@
 
 - 시간복잡도 : N개의 셀로 이뤄진 배열은 최대 N개의 단계가 필요 -> `O(N)`
 
-<img src = "Image\01\01.png" width = "600"/>
+<img src = "image\01\01.png" width = "600"/>
 
 ##### 2) Binary Search
 
@@ -71,7 +71,7 @@
   }
   ```
 
-<img src = "Image\01\02.png" width = "500"/>
+<img src = "image\01\02.png" width = "500"/>
 
 
 
@@ -97,7 +97,7 @@
 
   
 
-  <img src = "Image\01\03.png" width = "600"/>
+  <img src = "image\01\03.png" width = "600"/>
 
 
 
@@ -121,7 +121,7 @@
 
   
 
-  <img src = "Image\01\04.png" width = "600"/>
+  <img src = "image\01\04.png" width = "600"/>
 
 
 
@@ -147,7 +147,7 @@
   }
   ```
 
-  <img src = "Image\01\05.png" width = "500"/>
+  <img src = "image\01\05.png" width = "500"/>
 
 ##### 2) 배열의 시작에서 삭제
 
@@ -155,7 +155,7 @@
 
 - 시간복잡도 : O(N) -> 왼쪽으로 한칸씩 이동 (N : 배열 길이)
 
-  <img src = "Image\01\06.png" width = "600"/>
+  <img src = "image\01\06.png" width = "600"/>
 
   ```
   // Starting at index 1, we shift each element one position
@@ -178,7 +178,7 @@
 
 - 
 
-  <img src = "Image\01\07.png" width = "600"/>
+  <img src = "image\01\07.png" width = "600"/>
 
   ```
   // Say we want to delete the element at index 1
