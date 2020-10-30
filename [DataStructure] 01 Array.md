@@ -58,17 +58,7 @@
 
   ```swift
   var numbers = [1, 2, 3, 4, 5, 6, 7]
-  numbers.count
-  
-  / Declare an integer array of 6 elements
-  int intArray = new int[6];
-  int length = 0;
-  
-  // Add 3 elements to the Array
-  for (int i = 0; i < 3; i++) {
-      intArray[length] = i;
-      length++;
-  }
+  numbers.append(8) // [1, 2, 3, 4, 5, 6, 7, 8]
   ```
 
 <img src = "image\01\02.png" width = "500"/>
@@ -81,22 +71,13 @@
 
 - 시간복잡도 : O(N) -> N번의 이동 + 1번의 삽입
 
-  ```java
-  // First, we will have to create space for a new element.
-  // We do that by shifting each element one index to the right.
-  // This will firstly move the element at index 3, then 2, then 1, then finally 0.
-  // We need to go backwards to avoid overwriting any elements.
-  for (int i = 3; i >= 0; i--) {
-      intArray[i + 1] = intArray[i];
-  }
-  
-  // Now that we have created space for the new element,
-  // we can insert it at the beginning.
-  intArray[0] = 20;
+  ```swift
+  var numbers = [1, 2, 3, 4, 5, 6, 7]
+  numbers.insert(8, at: 0) // [8, 1, 2, 3, 4, 5, 6, 7]
   ```
-
   
-
+  
+  
   <img src = "image\01\03.png" width = "600"/>
 
 
@@ -105,22 +86,13 @@
 
 - 삽입할 위치에서 한칸씩 오른쪽으로 이동 후 빈 공간에 삽입
 
-  ```java
-  // Say we want to insert the element at index 2.
-  // First, we will have to create space for the new element.
-  for (int i = 4; i >= 2; i--)
-  {
-      // Shift each element one position to the right.
-      intArray[i + 1] = intArray[i];
-  }
-  
-  // Now that we have created space for the new element,
-  // we can insert it at the required index.
-  intArray[2] = 30;
+  ```swift
+  var numbers = [1, 2, 3, 4, 5, 6, 7]
+  numbers.insert(8, at: 4) // [1, 2, 3, 4, 8, 5, 6, 7]
   ```
-
   
-
+  
+  
   <img src = "image\01\04.png" width = "600"/>
 
 
@@ -133,20 +105,12 @@
 
 - **마지막에 입력된 데이터**를 삭제하는 작업 한 단계
 
-  ```java
-  // Declare an integer array of 10 elements.
-  int[] intArray = new int[10];
-  
-  // The array currently contains 0 elements
-  int length = 0;
-  
-  // Add elements at the first 6 indexes of the Array.
-  for(int i = 0; i < 6; i++) {
-      intArray[length] = i;
-      length++;
-  }
+  ```swift
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+  numbers.remove(at: 7)
+  numbers.removeLast(1)
   ```
-
+  
   <img src = "image\01\05.png" width = "500"/>
 
 ##### 2) 배열의 시작에서 삭제
@@ -157,21 +121,11 @@
 
   <img src = "image\01\06.png" width = "600"/>
 
+  ```swift
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+  numbers.remove(at: 0)
   ```
-  // Starting at index 1, we shift each element one position
-  // to the left.
-  for (int i = 1; i < length; i++) {
-      // Shift each element one position to the left
-      int_array[i - 1] = int_array[i];
-  }
   
-  // Note that it's important to reduce the length of the array by 1.
-  // Otherwise, we'll lose consistency of the size. This length
-  // variable is the only thing controlling where new elements might
-  // get added.
-  length--;
-  ```
-
   
 
 ##### 3) 배열의 중간에서 삭제
@@ -180,18 +134,11 @@
 
   <img src = "image\01\07.png" width = "600"/>
 
+  ```swift
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+  numbers.remove(at: 4)
   ```
-  // Say we want to delete the element at index 1
-  for (int i = 2; i < length; i++) {
-      // Shift each element one position to the left
-      int_array[i - 1] = int_array[i];
-  }
   
-  // Again, the length needs to be consistent with the current
-  // state of the array.
-  length--;
-  ```
-
   
 
 
