@@ -32,26 +32,28 @@
 
   ```swift
   public struct Stack<T> {
-    fileprivate var array = [T]()
-  
+    fileprivate var storage = [T]()
+    
+    public init() {}
+  	// isEmpty
     public var isEmpty: Bool {
-      return array.isEmpty
+      return self.storage.isEmpty
     }
-  
+  	// count
     public var count: Int {
-      return array.count
+      return self.storage.count
     }
-  
+  	// push
     public mutating func push(_ element: T) {
-      array.append(element)
+      self.storage.append(element)
     }
-  
+  	// pop
     public mutating func pop() -> T? {
-      return array.popLast()
+      return self.storage.popLast()
     }
-  
+  	// peek
     public var peek: T? {
-      return array.last
+      return self.storage.last
     }
   }
   ```
@@ -73,7 +75,7 @@
 - 기능
   - Enqueue: 큐에 데이터를 넣는 기능
     - 시간복잡도 : O(1) -> 맨 끝에 한 개의 element 추가
-  - Dequeue: 큐에서 데이터를 꺼내는 기능
+  - Dequeue: 큐에서 데이터를 꺼내는 기능 -> reamoveFirst() -->우선순위 큐로 해서 removeLast()
     - 시간복잡도 : O(n) -> 맨 앞의 요소를 제거한 후 뒤의 요소들을 앞으로 한칸씩 이동
   
   ```swift
