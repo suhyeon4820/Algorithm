@@ -10,7 +10,7 @@
   - FILO: 처음에 넣은 데이터를 가장 마지막에 추출하는 데이터 관리 정책
   - 대표적인 스택의 활용 : 컴퓨터 내부의 프로세스 구조의 함수 동작 방식
 
-  <img src = "\image\02\01.png" width = "600"/>
+  <img src = "image\02\01.png" width = "600"/>
 
   - 장점
     - 구조가 단순해서 구현이 쉬움
@@ -28,7 +28,7 @@
   - pop() : 데이터를 스택에서 꺼내기
   - peek() : 맨 위의 데이터 값만 가져오기 (삭제 X_)
 
-  <img src = "\image\02\02.svg" width = "500"/>
+  <img src = "image\02\02.svg" width = "500"/>
 
   ```swift
   public struct Stack<T> {
@@ -68,7 +68,7 @@
 
 - FIFO(First-In, First-Out) 또는 LILO(Last-In, Last-Out) 방식으로 스택과 꺼내는 순서가 반대
 
-  <img src = "\image\02\03.png" width = "600"/>
+  <img src = "image\02\03.png" width = "600"/>
 
 
 
