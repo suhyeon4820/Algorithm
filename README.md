@@ -14,7 +14,7 @@
 | 05 Tree                                                      |
 | 06 Binary Tree                                               |
 | 07 Binary Search Tree                                        |
-| 08 Heap                                                      |
+| 08 [Heap](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2008%20Heap.md) |
 | 09 Graph                                                     |
 
 
