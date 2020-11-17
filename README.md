@@ -10,7 +10,7 @@
 | 01 [Array](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2001%20Array.md) |
 | 02 [Stack & Queue](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2002%20Stack%20%26%20Queue.md) |
 | 03 Linked List                                               |
-| 04 HashTable                                                 |
+| 04 [HashTable](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2004%20HashTable.md) |
 | 05 Tree                                                      |
 | 06 Binary Tree                                               |
 | 07 Binary Search Tree                                        |
