@@ -1,6 +1,22 @@
 ## ReadME
 
-### 1. DataStructure (자료구조)
+### 1. Algorithm (알고리즘)
+
+- 알고리즘 별 Swift로 구현할 수 있도록 가장 기초적인 코드 구현 
+
+| 알고리즘                                                     |
+| ------------------------------------------------------------ |
+| 00 Recursive Ruction                                         |
+| 01 Greedy                                                    |
+| 02 [DFS & BFS](https://github.com/suhyeon4820/Algorithm/blob/master/%5BAlgorithm%5D%2002%20DFS%20%26%20BFS.md) |
+| 03 Sorting                                                   |
+| 04 Binary Search                                             |
+| 05 Dynamic Programming                                       |
+| 06 Shortest Path                                             |
+
+
+
+### 2. DataStructure (자료구조)
 
 - Swift 문법으로 기초적인 자료구조를 정리
 
@@ -19,10 +35,6 @@
 
 
 
-### 2. Algorithm (알고리즘)
-
-
-
 
 
 ---
@@ -34,6 +46,5 @@
 - Python 알고리즘 능력 향상을 위해 관련 홈페이지나 책을 통해 푼 문제들을 정리
 
   1) 코드업 기초 100제(-10문제)
-  
-  2) 모두의 알고리즘 with 파이썬 (Chapter18)
 
+  2) 모두의 알고리즘 with 파이썬 (Chapter18)
