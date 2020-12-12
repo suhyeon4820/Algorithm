@@ -1,4 +1,4 @@
-## DFS & BFS
+##  DFS & BFS
 
 ### 1. DFS(Depth-First Search) 깊이 우선 탐색 - Stack
 
@@ -31,6 +31,10 @@
      graph[2].append(contentsOf: [4])
      graph[3].append(contentsOf: [4])
      
+     for i in 1...n {
+         graph[i].sort() // 가장 낮은 노드부터 방문하게 정렬
+     }
+     //-----------------------------------------------
      var visited = [Bool](repeating: false, count: n+1)
      var dfsResult = String()
      
