@@ -6,7 +6,7 @@ let array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 var end = 10
 let target = 7
 //*********************************************
-var start = 1
+var start = array[0]
 
 
 func findTarget(array: [Int], target: Int, start: Int, end: Int) -> Int? {

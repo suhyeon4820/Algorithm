@@ -51,23 +51,20 @@
   ```swift
   var inputs = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
   
-func bubbleSort(array: inout [Int]){
-      for i in stride(from: array.count - 1, through: 0, by: -1){
-          for j in 0 ..< i {
-              if(array[j] >= array[j+1]){
-                  let temp = array[j+1]
-                  array[j+1] = array[j]
-                  array[j] = temp
-              }
-          }
-      }
-  }
+  func bubbleSort(array: inout [Int]){
+        for i in stride(from: array.count - 1, through: 0, by: -1){
+            for j in 0 ..< i {
+                if(array[j] >= array[j+1]){
+                    let temp = array[j+1]
+                    array[j+1] = array[j]
+                    array[j] = temp
+                }
+            }
+        }
+    }
   
   bubbleSort(array: &inputs)
   ```
-  
-  
-
 ### 2. 삽입 정렬
 
 - 처리되지 않은 데이터를 하나씩 골라 적절한 위치에 삽입
@@ -80,29 +77,25 @@ func bubbleSort(array: inout [Int]){
   
   - 최선의 경우 O(N)의 시간 복잡도를 가짐
   
-- 알고리즘
-
   ```swift
   var inputs = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
-  
-  func insertionSort(array: inout [Int]){
-      for i in 1 ..< array.count {
-          let temp = array[i]
-          var index = i - 1
-          while(index >= 0 && array[index] >= temp){
-              array[index+1] = array[index]
-              index -= 1
-          }
-          array[index+1] = temp
-      }
-  }
-  
-  insertionSort(array: &inputs)
+    
+    func insertionSort(array: inout [Int]){
+        for i in 1 ..< array.count {
+            let temp = array[i]
+            var index = i - 1
+            while(index >= 0 && array[index] >= temp){
+                array[index+1] = array[index]
+                index -= 1
+            }
+            array[index+1] = temp
+        }
+    }
+    
+    insertionSort(array: &inputs)
   ```
-
   
-
-
+    
 
 ### 3. 퀵 정렬
 
@@ -113,8 +106,6 @@ func bubbleSort(array: inout [Int]){
 - 가장 기본적인 퀵 정렬은 **첫 번째 데이터를 기준 데이터(Pivot)로 설정**
 - 퀵 정렬은 평균의 경우 O(NlogN)의 시간 복잡도를 가짐
   - 하지만 최악의 경우 O(N제곱)의 시간 복잡도를 가짐
-
-
 
 ```swift
 var array = [ 10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26 ]
