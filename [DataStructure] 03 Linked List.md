@@ -2,36 +2,31 @@
 
 ***
 
->데이터에 순서를 매겨 늘어놓은 자료구조 
-
-각각의 원소들은 자기 자신 다음에 어떤 원소인지만을 기억하고 있다. 따라서 이 부분만 다른 값으로 바꿔주면 삭제와 삽입을 O(1) 만에 해결할 수 있는 것이다.
-
-하지만 Linked List 역시 한 가지 문제가 있다. 원하는 위치에 삽입을 하고자 하면 원하는 위치를 Search 과정에 있어서 첫번째 원소부터 다 확인해봐야 한다는 것이다. Array 와는 달리 논리적 저장 순서와 물리적 저장 순서가 일치하지 않기 때문이다. 이것은 일단 삽입하고 정렬하는 것과 마찬가지이다. 이 과정 때문에, 어떠한 원소를 삭제 또는 추가하고자 했을 때, 그 원소를 찾기 위해서 O(n)의 시간이 추가적으로 발생하게 된다.
-
-결국 linked list 자료구조는 search 에도 O(n)의 time complexity 를 갖고, 삽입, 삭제에 대해서도 O(n)의 time complexity 를 갖는다. 그렇다고 해서 아주 쓸모없는 자료구조는 아니기에, 우리가 학습하는 것이다. 이 Linked List 는 이며, Tree 에서 사용되었을 때 그 유용성이 드러난다.
+>항목들을 링크를 통해 일렬로 나열할 수 있는 연결된 구조 (데이터에 순서를 매겨 늘어놓은 자료구조 )
 
 #### 1. Linked List (연결리스트) 구조
 
-- 배열은 순차적으로 연결된 공간에 데이터를 나열하는 데이터 구조
 - 링크드 리스트는 떨어진 곳에 존재하는 데이터를 화살표로 연결해서 관리하는 데이터 구조
 - 링크드 리스트 기본 구조와 용어
   - **노드(Node)**: 각각의 원소, 데이터 저장 단위 (데이터값 + 포인터) 로 구성
-  - **포인터(pointer)**: 각 노드 안에서 다음이나 이전의 노드와의 연결 정보를 가지고 있는 공간
+  - **데이터(Data)** : 저장하고 싶은 데이터
+  - **포인터(pointer)/링크** : 각 노드 안에서 다음이나 이전의 노드와의 연결 정보를 가지고 있는 공간
     - 다음 노드의 시작 메모리 주소를 뜻하는 링크 포함
-    - 마짐가 노드의 링크는 null
+    - 마지막 노드의 포인터(링크)는 nil
 
-<img src = "\image\03\01.png" width = "600">
+<img src = "image\03\01.png" width = "600">
 
 - 장점
+  - 각각의 원소들은 자기 자신 다음에 어떤 원소가 연결되었는지 알고 있음 -> 중간에 삭제, 삽입이 쉬움 **O(1)** 
   - 미리 데이터 공간을 미리 할당하지 않아도 됨
     - 배열은 **미리 데이터 공간을 할당** 해야 함
   - Tree 구조의 근간이 되는 자료구조
 - 단점
   - 연결을 위한 별도 데이터 공간이 필요하므로, 저장공간 효율이 높지 않음
-  - 연결 정보를 찾는 시간이 필요하므로 접근 속도가 느림
+  - Array 와 달리 논리적 저장 순서와 물리적 저장 순서가 달라 원하는 위치의 정보를 찾는 시간이 필요해 접근 속도가 느림 -> **O(n)**
   - 중간 데이터 삭제시, 앞뒤 데이터의 연결을 재구성해야 하는 부가적인 작업 필요
 
-
+|
 
 #### 2. 삽입
 
@@ -49,35 +44,33 @@
 
   1) 새로운 노드 `cur` 생성
 
-  <img src = "\image\03\02.png" width ="600">
+  <img src = "image\03\02.png" width ="600">
 
   
 
   2) `cur`노드를 next 노드에 연결
 
-  <img src = "\image\03\03.png" width = "600">
+  <img src = "image\03\03.png" width = "600">
 
   
 
   3)  next 노드와 연결된 `cur`노드를 prev 노드에 연결
 
-  <img src = "\image\03\04.png" width = "600">
+  <img src = "image\03\04.png" width = "600">
 
 
 
 ---
 
-- step 1 — create a Node class
-- step 2 — create a LinkedList class
-- step 3 — provide a last Node
-- step 4 — add the ability to append Nodes
-- step 5 — fetch the number Nodes in a LinkedList
-- step 6 — print each Node value from a LinkedList
-- step 7 —fetch a Node from a specified index
-- step 8 — insert a Node at a specific index
-- step 9 — remove a Node at a specific index
+## Doubly Linked List - code
 
-step 1 — create a Node class
+- 하나의 노드가 이전 노드와 다음 노드를 모두 알고 있도록 설계
+
+<img src = "image\03\05.png" width = "600">
+
+
+
+### Step 1 — create a Node class
 
 - 노드의 값 : **value**
 - 다음 노드의 pointer :  **next**
@@ -97,7 +90,9 @@ public class LinkedListNode<T> {
 }
 ```
 
-step 2 — create a LinkedList class
+<br>
+
+### Step 2 — create a LinkedList class
 
 - Head : 첫 번째 노드
 
@@ -119,10 +114,15 @@ public class LinkedList<T> {
 }
 ```
 
-step 3 — provide a last Node
+<br>
 
-- 첫 번째 노드가 있는지 확인 후 
-- fg
+### Step 3 — provide a last Node
+
+- We can get access to the last Node in our list by first checking if the head even has a value. By doing this, if the head is nil we can immediately communicate that there is indeed no last node given there isn’t even a head to begin with.
+
+  If the head does have a value then we need to check it’s next node to see if it has a value and if it does, check it’s next value to see if it has a value and so on until there is no next value on the final node.next Node.
+
+  When the while loop fails, we will know we have reached the end of our list and we can return the last node.
 
 ```swift
 public var last: Node? {
@@ -135,9 +135,9 @@ public var last: Node? {
 }
 ```
 
+<br>
 
-
-Step 4 — Appending Nodes
+### Step 4 — Appending Nodes
 
 - 값(value)을 받을 수 있도록 newNode 생성
 - 마지막 노드가 있는지 확인
@@ -157,7 +157,9 @@ public func append(value: T) {
 }
 ```
 
-step 5 — fetch the number Nodes in a LinkedList // counting the nodes
+<br>
+
+### Step 5 — fetch the number Nodes in a LinkedList // counting the nodes
 
 - head가 값을 가지고 있는지 확인하고, 값이 없으면 0을 return
 - if head does have a value then we automatically know there is at least one value, so when we declare count we start at 1
@@ -176,9 +178,10 @@ public var count: Int {
 }
 ```
 
+<br>
 
+### Step 6 — print each Node value from a LinkedList
 
-- step 6 — print each Node value from a LinkedList
 - create a public variable called print.
 - set the current node to our head node
 - use a while loop to traverse our list. while node is not nil, it must have a value, add that value to our string
@@ -198,9 +201,10 @@ public var print: String {
 }
 ```
 
+<br>
 
+### Step 7 —fetch a Node from a specified index
 
-- step 7 —fetch a Node from a specified index
 - check if the index is 0, if it is, then just return the head.
 - if index is not 0, then use a for loop to navigate through our nodes until we reach the index, then return that node if it is not nil.
 - if all else fails, just return the node
@@ -220,9 +224,10 @@ public func node(atIndex index: Int) -> Node {
 }
 ```
 
+<br>
 
+### Step 8 — insert a Node at a specific index
 
-- step 8 — insert a Node at a specific index
 - take the value we desire to insert, and create an instance of Node with it.
 - if the index is 0, simply take the new node’s next node and set it as our head
 - take the head and set it’s previous to our newNode
@@ -254,9 +259,10 @@ public func insert(value: T, atIndex index: Int) {
 }
 ```
 
+<br>
 
+### Step 9 — remove a Node at a specific index
 
-- step 9 — remove a Node at a specific index
 - ake in a node to remove and set the previousNode to node’s previous
 - do the same, respectively, with nextNode
 - if the previous node exists, then take it’s next node and assign it to the node we are removing’s next node
