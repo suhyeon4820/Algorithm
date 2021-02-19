@@ -28,9 +28,9 @@
 | 02 [Stack & Queue](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2002%20Stack%20%26%20Queue.md) | 1874, 1966, [5397](https://github.com/suhyeon4820/Algorithm/blob/master/%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C/5397.playground/Contents.swift) |
 | 03 [Linked List](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2003%20Linked%20List.md) |                                                              |
 | 04 [HashTable](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2004%20HashTable.md) | [1920](https://github.com/suhyeon4820/Algorithm/blob/master/%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C/1920.playground/Contents.swift), [4195](https://github.com/suhyeon4820/Algorithm/blob/master/%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C/4195.playground/Contents.swift) |
-| 05 Tree                                                      | 1991, 2250                                                   |
-| 06 Binary Tree                                               |                                                              |
-| 07 Binary Search Tree                                        |                                                              |
+| 05 [Tree](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2005%20Tree.md) | 1991, 2250                                                   |
+| 06 [Binary Tree](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2006%20Binary%20Tree%20.md) |                                                              |
+| 07 [Binary Search Tree](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2007%20Binary%20Search%20Tree%20%20.md) |                                                              |
 | 08 [Heap](https://github.com/suhyeon4820/Algorithm/blob/master/%5BDataStructure%5D%2008%20Heap.md) | 1927, 1715, 1766                                             |
 | 09 Graph                                                     |                                                              |
 
