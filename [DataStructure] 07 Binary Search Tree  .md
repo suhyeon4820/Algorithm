@@ -20,7 +20,7 @@
 
     
 
-    <img src = "\image\05\06.png" width = "300">
+    <img src = "image\05\06.png" width = "300">
 
     
 
@@ -98,3 +98,5 @@ extension BinaryTree: CustomStringConvertible {
 ---
 
 - https://www.raywenderlich.com/990-swift-algorithm-club-swift-binary-search-tree-data-structure
+
+- https://medium.com/analytics-vidhya/data-structures-in-swift-binary-search-tree-694431cc3a2f
