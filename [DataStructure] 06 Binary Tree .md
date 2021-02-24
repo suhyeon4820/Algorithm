@@ -117,9 +117,9 @@
 
 - 이진 트리 순회 종류
 
-  - *In-order* (or *depth-first*): first look at the left child of a node, then at the node itself, and finally at its right child.
-  - *Pre-order*: first look at a node, then at its left and right children.
-  - *Post-order*: first look at the left and right children and process the node itself last.
+  - 중위 순회(In-order traversal) : 왼쪽 자식 -> 루트 -> 오른쪽 자식
+  - 전위 순회(Pre-order traversal) : 루트 -> 왼쪽 자식 -> 오른쪽 자식
+  - 후위 순회(Post-order traversal) : 왼쪽 자식 -> 오른쪽 자식 -> 루트
 
   ```swift
   public func traverseInOrder(process: (T) -> Void) {
